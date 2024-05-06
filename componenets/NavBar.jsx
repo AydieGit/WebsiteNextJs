@@ -12,7 +12,7 @@ const NavBar = () => {
             scrollTrigger:{
                 trigger: '#scroll',
                 start: 'top top',
-                end: '+=900',
+                end: '+=700',
                 scrub: true,
 
             },
