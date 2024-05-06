@@ -2,32 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+#Particles{
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* MAIN */
+html{
+  min-height: 100vh;
+  background: black;
+  color: white;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+body{
+  display: grid;
+  grid-template-columns: 1fr 5rem;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Welcome */
+.welcome{
+  text-align: center;
+}
+.welcome h1{
+  padding-top: 20px;
+  font-size: 120px;
+  color: rgb(82, 95, 153);
+
+}
+.welcome h2{
+  padding-top: 20px;
+  font-size: 100px;
+}
+.objects{
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem 10rem 10rem 10rem 10rem  10rem 10rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Routes */
+.routes-container{
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+}
+.routes-container ul{
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem;
+  justify-content: center;
+  padding-bottom: 250px;
+}
+/* About Me */
+#AboutMe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+#img{
+  max-width: 60%;
+  margin: 0;
+  z-index: -1;
+  opacity: 0;
+}
+#text {
+  width: 60%;
+  margin: 0 auto;
+}
+.reveal-text{
+  font-size: 40px;
+}
+.logo-png{
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem ;
+  padding-top: 20px;
+  padding-left: 200px;
+  justify-content: center;
+}
+.vadim{
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem ;
+}
+
+
+/* NavBar */
+#scroll{
+  padding-top: 20px;
 }
